@@ -3,7 +3,7 @@ from time import sleep
 from json import loads
 
 def openConfig():
-    with open('config.json') as json_file:
+    with open('config.json', 'r', encoding='utf-8') as json_file:
         data = loads(json_file.read())
         json_file.close()
         return data
@@ -28,8 +28,6 @@ https://github.com/CoffeSiberian
 *************************
 
 Mensaje a enviar: {configs["msj"]}
-
-Do not use accents or Ñ
 
 Cada {configs["delay"]} minutos
     ''')
