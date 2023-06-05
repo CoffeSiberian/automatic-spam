@@ -1,4 +1,5 @@
-from pyautogui import typewrite, press
+from pyautogui import press, hotkey
+from pyperclip import copy
 from time import sleep
 from json import loads
 
@@ -13,7 +14,8 @@ def bucle(msj: str, time: int):
         sleep(time*60)
         try:
             press("y")
-            typewrite(msj)
+            copy(msj)
+            hotkey('ctrl', 'v')
             press("enter")
         except:
             break
