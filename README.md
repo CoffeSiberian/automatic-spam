@@ -8,7 +8,7 @@ First you will need to install Poetry to handle the project dependencies. You ca
 
 ## Build
 
-Para poder crear tu propio binario ejecutable en tu sistema puedes utilizar el siguiente comando luego de instalar todas las dependencias
+In order to create your own executable binary on your system you can use the following command after installing all dependencies
 
 ```bash
 pyinstaller --clean main.py
