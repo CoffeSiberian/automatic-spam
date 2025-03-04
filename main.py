@@ -9,7 +9,7 @@ def openConfig():
         json_file.close()
         return data
 
-def bucle(msj: str, time: int):
+def process(msj: str, time: int):
     while True:
         sleep(time*60)
         try:
@@ -25,19 +25,20 @@ def main():
     print(f'''
 *************************
 Simple SPAM BOT
-By: SiberianCoffe#1172
+By: SiberianCoffe
 https://github.com/CoffeSiberian
 *************************
 
-Mensaje a enviar: {configs["msj"]}
+Message to send: {configs["msj"]}
 
-Cada {configs["delay"]} minutos
+Each {configs["delay"]} minutes
     ''')
 
-    bucle(configs["msj"], configs["delay"])
+    process(configs["msj"], configs["delay"])
 
 if __name__ == "__main__":
     try:
         main()
-    except:
+    except Exception as e:
+        print(f"An error occurred: {e}")
         exit()
