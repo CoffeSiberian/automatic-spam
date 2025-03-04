@@ -1,4 +1,5 @@
 {
-    "msj": "your message",
-    "delay": 4
+    "msj1": "your message",
+    "msj2": "your second message",
+    "delay": 1
 }
